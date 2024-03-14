@@ -22,14 +22,16 @@ project "ImGui"
 		"imgui_demo.cpp"
 	}
 
+	defines {
+		"_CRT_SECURE_NO_WARNINGS"
+	}
+
 	filter "system:windows"
 		systemversion "latest"
-		cppdialect "C++17"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
-		cppdialect "C++17"
 
 	filter "configurations:Debug"
 		runtime "Debug"
